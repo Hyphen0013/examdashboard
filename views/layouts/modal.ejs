@@ -1,0 +1,57 @@
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Select course</h3>
+    <hr><br>
+    <div class="row">
+            <div class="column-2" style="background-color:#aaa;">
+              <h2><a href="/test-page">Java</a></h2>
+            </div>
+            <div class="column-2" style="background-color:#bbb;">
+              <h2><a href="/test-page">DB</a></h2>
+            </div>
+            <div class="column-2" style="background-color:#ccc;">
+              <h2><a href="/test-page">HTML</a></h2>
+            </div>
+            <div class="column-2" style="background-color:#ddd;">
+              <h2><a href="/test-page">CSS</a></h2>
+            </div>
+          </div>
+  </div>
+
+</div>
+
+
+<script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>

@@ -1,0 +1,139 @@
+<% include ../index %>
+
+<a class="test_page_next submit-button" id="myBtn">Submit</a>
+<div class="container" style="margin-top: 42px; ">
+    <div class="tab">
+        <div style="margin-top: 30px;">
+            <button class="tablinks" onclick="openCity(event, '1')" id="defaultOpen">1</button>
+            <button class="tablinks" onclick="openCity(event, '2')">2</button>
+            <button class="tablinks" onclick="openCity(event, '3')">3</button>
+            <button class="tablinks" onclick="openCity(event, '4')">4</button>
+            <button class="tablinks" onclick="openCity(event, '5')">5</button>
+            <button class="tablinks" onclick="openCity(event, '6')">6</button>
+        </div>
+    </div>
+
+    <div id="1" class="tabcontent">
+        <h3>What is HTML?</h3>
+        <ul class="question">
+            <li>Hyper Text Markup Language</li>
+            <li>Stylesheet</li>
+            <li>Hyper Text Makeup Language</li>
+            <li>None</li>
+        </ul>
+    </div>
+
+    <div id="2" class="tabcontent">
+        <h3>What is CSS?</h3>
+        <ul class="question">
+            <li>Hyper Text Markup Language</li>
+            <li>Stylesheet</li>
+            <li>Hyper Text Makeup Language</li>
+            <li>None</li>
+        </ul>
+    </div>
+
+    <div id="3" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <div id="4" class="tabcontent">
+        <h3>What is HTML?</h3>
+        <ul class="question">
+            <li>Hyper Text Markup Language</li>
+            <li>Stylesheet</li>
+            <li>Hyper Text Makeup Language</li>
+            <li>None</li>
+        </ul>
+    </div>
+    <div id="5" class="tabcontent">
+        <h3>What is HTML?</h3>
+        <ul class="question">
+            <li>Hyper Text Markup Language</li>
+            <li>Stylesheet</li>
+            <li>Hyper Text Makeup Language</li>
+            <li>None</li>
+        </ul>
+    </div>
+    <div id="6" class="tabcontent">
+        <h3>What is HTML?</h3>
+        <ul class="question">
+            <li>Hyper Text Markup Language</li>
+            <li>Stylesheet</li>
+            <li>Hyper Text Makeup Language</li>
+            <li>None</li>
+        </ul>
+    </div>
+</div>
+
+<a class="test_page_next">Next</a>
+
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Do you really want to submit?</h3>
+    <hr><br>
+
+    <button><a href="/score-page">YES</a></button>
+    <button><a href="/test-page">NO</a></button>
+    </div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+</body>
+<% include ../include/footer.ejs %>
+
+</html>
